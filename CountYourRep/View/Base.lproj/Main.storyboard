@@ -33,8 +33,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPT-Eb-hF3">
+                                <rect key="frame" x="0.0" y="482" width="414" height="414"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vPT-Eb-hF3" secondAttribute="height" multiplier="1:1" id="Ihj-wj-yZI"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="IpI-1g-HgO">
-                                <rect key="frame" x="50" y="173" width="314" height="550"/>
+                                <rect key="frame" x="50" y="153.5" width="314" height="550"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="U0K-Fp-Hme">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="264"/>
@@ -50,6 +57,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the workout name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-pf-AuW">
                                                         <rect key="frame" x="0.0" y="32" width="314" height="34"/>
+                                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -72,6 +80,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8M-S3-D3R">
                                                         <rect key="frame" x="0.0" y="32" width="314" height="34"/>
+                                                        <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -94,6 +103,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7PD-tI-igx">
                                                         <rect key="frame" x="0.0" y="32" width="314" height="34"/>
+                                                        <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -131,9 +141,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="IgK-U0-n8s"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <state key="normal" title="Add workout">
-                                                    <color key="titleColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -151,10 +161,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.019607843137254902" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="IpI-1g-HgO" firstAttribute="centerY" secondItem="32Q-n1-ByY" secondAttribute="centerY" id="QRR-6g-ZuK"/>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="leading" secondItem="32Q-n1-ByY" secondAttribute="leading" constant="50" id="ZXT-KD-gjm"/>
+                            <constraint firstAttribute="bottom" secondItem="vPT-Eb-hF3" secondAttribute="bottom" id="cSt-4p-Pyu"/>
                             <constraint firstItem="32Q-n1-ByY" firstAttribute="trailing" secondItem="IpI-1g-HgO" secondAttribute="trailing" constant="50" id="iJW-1p-hiD"/>
-                            <constraint firstItem="IpI-1g-HgO" firstAttribute="centerX" secondItem="DAO-yb-yT0" secondAttribute="centerX" id="jTq-0C-gBg"/>
-                            <constraint firstItem="IpI-1g-HgO" firstAttribute="centerY" secondItem="DAO-yb-yT0" secondAttribute="centerY" id="xHH-vb-hkL"/>
+                            <constraint firstItem="IpI-1g-HgO" firstAttribute="centerX" secondItem="32Q-n1-ByY" secondAttribute="centerX" id="jTq-0C-gBg"/>
+                            <constraint firstItem="vPT-Eb-hF3" firstAttribute="leading" secondItem="DAO-yb-yT0" secondAttribute="leading" id="qDd-5Q-kn9"/>
+                            <constraint firstItem="32Q-n1-ByY" firstAttribute="trailing" secondItem="vPT-Eb-hF3" secondAttribute="trailing" id="ygt-XK-r9k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="32Q-n1-ByY"/>
                     </view>
@@ -165,6 +178,7 @@
                         <outlet property="repeatTextField" destination="m8M-S3-D3R" id="zmz-cZ-M6n"/>
                         <outlet property="resumeLabel" destination="zFe-eJ-sH2" id="fVg-cW-F1R"/>
                         <outlet property="seriesTextField" destination="7PD-tI-igx" id="3om-TX-uBI"/>
+                        <outlet property="topView" destination="vPT-Eb-hF3" id="r1i-lt-dMF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-jF-I52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

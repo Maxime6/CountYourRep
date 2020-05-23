@@ -16,17 +16,20 @@ class NewWorkoutViewController: UIViewController {
     @IBOutlet weak var resumeLabel: UILabel!
     @IBOutlet weak var addWorkoutButton: UIButton!
     
+    @IBOutlet weak var topView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAddButton()
+        topView.layer.cornerRadius = 40
     }
     
     private func setUpAddButton() {
-        addWorkoutButton.layer.shadowOffset = CGSize(width: 10, height: 10)
-        addWorkoutButton.layer.shadowRadius = 10.0
-        addWorkoutButton.layer.shadowColor = CGColor(srgbRed: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)
-        addWorkoutButton.layer.cornerRadius = 20.0
+        addWorkoutButton.layer.cornerRadius = 20
+        addWorkoutButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        addWorkoutButton.layer.shadowColor = UIColor(ciColor: .black).cgColor
+        addWorkoutButton.layer.shadowRadius = 3
+        addWorkoutButton.layer.shadowOpacity = 0.3
     }
 
 
