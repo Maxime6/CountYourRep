@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		AF63CD6524771D5900E76A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63CD6424771D5900E76A22 /* AppDelegate.swift */; };
 		AF63CD6724771D5900E76A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63CD6624771D5900E76A22 /* SceneDelegate.swift */; };
-		AF63CD6924771D5900E76A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63CD6824771D5900E76A22 /* ViewController.swift */; };
 		AF63CD6C24771D5900E76A22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF63CD6A24771D5900E76A22 /* Main.storyboard */; };
 		AF63CD6F24771D5900E76A22 /* CountYourRep.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF63CD6D24771D5900E76A22 /* CountYourRep.xcdatamodeld */; };
 		AF63CD7124771D5C00E76A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF63CD7024771D5C00E76A22 /* Assets.xcassets */; };
 		AF63CD7424771D5C00E76A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF63CD7224771D5C00E76A22 /* LaunchScreen.storyboard */; };
 		AF63CD7F24771D5C00E76A22 /* CountYourRepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63CD7E24771D5C00E76A22 /* CountYourRepTests.swift */; };
+		AFF528E724795C3A000040D6 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF528E624795C3A000040D6 /* NewWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,6 @@
 		AF63CD6124771D5900E76A22 /* CountYourRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountYourRep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF63CD6424771D5900E76A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF63CD6624771D5900E76A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF63CD6824771D5900E76A22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF63CD6B24771D5900E76A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF63CD6E24771D5900E76A22 /* CountYourRep.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountYourRep.xcdatamodel; sourceTree = "<group>"; };
 		AF63CD7024771D5C00E76A22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		AF63CD7A24771D5C00E76A22 /* CountYourRepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountYourRepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF63CD7E24771D5C00E76A22 /* CountYourRepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountYourRepTests.swift; sourceTree = "<group>"; };
 		AF63CD8024771D5C00E76A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF528E624795C3A000040D6 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +81,10 @@
 		AF63CD6324771D5900E76A22 /* CountYourRep */ = {
 			isa = PBXGroup;
 			children = (
-				AF63CD6424771D5900E76A22 /* AppDelegate.swift */,
-				AF63CD6624771D5900E76A22 /* SceneDelegate.swift */,
-				AF63CD6824771D5900E76A22 /* ViewController.swift */,
-				AF63CD6A24771D5900E76A22 /* Main.storyboard */,
-				AF63CD7024771D5C00E76A22 /* Assets.xcassets */,
-				AF63CD7224771D5C00E76A22 /* LaunchScreen.storyboard */,
-				AF63CD7524771D5C00E76A22 /* Info.plist */,
-				AF63CD6D24771D5900E76A22 /* CountYourRep.xcdatamodeld */,
+				AF63CD8C24771D9800E76A22 /* SupportingFiles */,
+				AF63CD8924771D6B00E76A22 /* Model */,
+				AF63CD8A24771D8100E76A22 /* View */,
+				AF63CD8B24771D8700E76A22 /* Controller */,
 			);
 			path = CountYourRep;
 			sourceTree = "<group>";
@@ -100,6 +96,42 @@
 				AF63CD8024771D5C00E76A22 /* Info.plist */,
 			);
 			path = CountYourRepTests;
+			sourceTree = "<group>";
+		};
+		AF63CD8924771D6B00E76A22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF63CD6D24771D5900E76A22 /* CountYourRep.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF63CD8A24771D8100E76A22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF63CD6A24771D5900E76A22 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF63CD8B24771D8700E76A22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFF528E624795C3A000040D6 /* NewWorkoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF63CD8C24771D9800E76A22 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AF63CD7224771D5C00E76A22 /* LaunchScreen.storyboard */,
+				AF63CD6424771D5900E76A22 /* AppDelegate.swift */,
+				AF63CD6624771D5900E76A22 /* SceneDelegate.swift */,
+				AF63CD7024771D5C00E76A22 /* Assets.xcassets */,
+				AF63CD7524771D5C00E76A22 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF63CD6F24771D5900E76A22 /* CountYourRep.xcdatamodeld in Sources */,
-				AF63CD6924771D5900E76A22 /* ViewController.swift in Sources */,
+				AFF528E724795C3A000040D6 /* NewWorkoutViewController.swift in Sources */,
 				AF63CD6524771D5900E76A22 /* AppDelegate.swift in Sources */,
 				AF63CD6724771D5900E76A22 /* SceneDelegate.swift in Sources */,
 			);
@@ -368,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WC244SYFG3;
-				INFOPLIST_FILE = CountYourRep/Info.plist;
+				INFOPLIST_FILE = CountYourRep/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WC244SYFG3;
-				INFOPLIST_FILE = CountYourRep/Info.plist;
+				INFOPLIST_FILE = CountYourRep/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
