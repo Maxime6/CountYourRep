@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="90" id="KGk-i7-Jjw" customClass="workoutTableViewCell" customModule="CountYourRep" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXr-oY-uTc">
+                        <rect key="frame" x="331" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="eh1-BY-LT6"/>
+                            <constraint firstAttribute="width" constant="50" id="fUD-t8-rAh"/>
+                        </constraints>
+                        <color key="tintColor" red="0.48856725109999999" green="0.85715418779999997" blue="0.3974143503" alpha="0.79318279110000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="" image="plus.circle.fill" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GcX-8U-Fmo">
+                        <rect key="frame" x="20" y="10" width="301" height="50"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Da2-lB-rkN">
+                                <rect key="frame" x="10" y="14" width="281" height="22.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0c-jR-ypq">
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTA-Y1-qma">
+                                        <rect key="frame" x="211" y="0.0" width="30" height="22.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="toP-eD-TS2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFO-lP-2OY">
+                                        <rect key="frame" x="251" y="0.0" width="30" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <color key="textColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xFO-lP-2OY" firstAttribute="height" secondItem="kTA-Y1-qma" secondAttribute="height" id="5bX-cP-nQH"/>
+                                    <constraint firstItem="xFO-lP-2OY" firstAttribute="width" secondItem="kTA-Y1-qma" secondAttribute="width" id="5w4-v8-R5D"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Eyn-Fa-MTr"/>
+                            <constraint firstItem="Da2-lB-rkN" firstAttribute="leading" secondItem="GcX-8U-Fmo" secondAttribute="leading" constant="10" id="v7Z-KV-p5w"/>
+                            <constraint firstItem="Da2-lB-rkN" firstAttribute="centerY" secondItem="GcX-8U-Fmo" secondAttribute="centerY" id="wdl-ya-Tp6"/>
+                            <constraint firstAttribute="trailing" secondItem="Da2-lB-rkN" secondAttribute="trailing" constant="10" id="ybZ-Sf-VC3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="GcX-8U-Fmo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3GG-0B-2o6"/>
+                    <constraint firstItem="hXr-oY-uTc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5fK-6y-sS7"/>
+                    <constraint firstItem="GcX-8U-Fmo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Fvy-1F-SF8"/>
+                    <constraint firstItem="GcX-8U-Fmo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HP9-JA-pW9"/>
+                    <constraint firstItem="hXr-oY-uTc" firstAttribute="leading" secondItem="GcX-8U-Fmo" secondAttribute="trailing" constant="10" id="S2K-nN-eH9"/>
+                    <constraint firstAttribute="trailing" secondItem="hXr-oY-uTc" secondAttribute="trailing" constant="10" id="ode-tA-tlh"/>
+                    <constraint firstAttribute="bottom" secondItem="GcX-8U-Fmo" secondAttribute="bottom" constant="10" id="u13-FF-rNT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="workoutNameLabel" destination="N0c-jR-ypq" id="cdk-hu-WSy"/>
+                <outlet property="workoutView" destination="GcX-8U-Fmo" id="eKG-X3-dYj"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="86.383928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

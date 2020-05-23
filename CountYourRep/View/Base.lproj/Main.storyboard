@@ -17,15 +17,72 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.14901960784313725" green="0.16862745098039217" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.48856725109999999" green="0.85715418779999997" blue="0.3974143503" alpha="0.79318279110000001" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="kgG-Oa-yxB" kind="relationship" relationship="viewControllers" id="N9f-HG-G7Q"/>
+                        <segue destination="Abb-ab-ZFq" kind="relationship" relationship="viewControllers" id="K5F-LZ-gSg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkn-NT-MH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-429" y="-144"/>
+        </scene>
+        <!--Workout-->
+        <scene sceneID="1DN-MH-Pxe">
+            <objects>
+                <viewController id="Abb-ab-ZFq" customClass="WorkoutsViewController" customModule="CountYourRep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lpV-u0-94c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-OM-PvV">
+                                <rect key="frame" x="15" y="64" width="384" height="666.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Abb-ab-ZFq" id="1gH-DC-O1P"/>
+                                    <outlet property="delegate" destination="Abb-ab-ZFq" id="7TN-nQ-TCQ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68u-UO-9Xs">
+                                <rect key="frame" x="0.0" y="735.5" width="414" height="117.5"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the + button to add your workout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5J-TV-Cc0">
+                                <rect key="frame" x="0.0" y="760.5" width="414" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="68u-UO-9Xs" secondAttribute="bottom" constant="-40" id="9z5-ZS-OAz"/>
+                            <constraint firstItem="8Ln-cF-lr9" firstAttribute="bottom" secondItem="C5J-TV-Cc0" secondAttribute="bottom" constant="30" id="Lce-sq-Cb1"/>
+                            <constraint firstItem="68u-UO-9Xs" firstAttribute="top" secondItem="uaK-OM-PvV" secondAttribute="bottom" constant="5" id="MZw-Ua-lZQ"/>
+                            <constraint firstItem="C5J-TV-Cc0" firstAttribute="leading" secondItem="8Ln-cF-lr9" secondAttribute="leading" id="RuU-X3-yJD"/>
+                            <constraint firstItem="8Ln-cF-lr9" firstAttribute="trailing" secondItem="uaK-OM-PvV" secondAttribute="trailing" constant="15" id="UZK-Uz-hqo"/>
+                            <constraint firstItem="68u-UO-9Xs" firstAttribute="leading" secondItem="8Ln-cF-lr9" secondAttribute="leading" id="Vta-MN-jNM"/>
+                            <constraint firstItem="uaK-OM-PvV" firstAttribute="leading" secondItem="8Ln-cF-lr9" secondAttribute="leading" constant="15" id="Wzl-o0-xzK"/>
+                            <constraint firstItem="C5J-TV-Cc0" firstAttribute="top" secondItem="uaK-OM-PvV" secondAttribute="bottom" constant="30" id="X5r-sw-zkX"/>
+                            <constraint firstItem="68u-UO-9Xs" firstAttribute="trailing" secondItem="8Ln-cF-lr9" secondAttribute="trailing" id="fBA-Gc-rQ2"/>
+                            <constraint firstItem="uaK-OM-PvV" firstAttribute="top" secondItem="8Ln-cF-lr9" secondAttribute="top" constant="20" id="g5s-db-j1L"/>
+                            <constraint firstItem="C5J-TV-Cc0" firstAttribute="centerX" secondItem="lpV-u0-94c" secondAttribute="centerX" id="n5G-fA-pEF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Ln-cF-lr9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Workout" id="ZY0-Ew-WPe"/>
+                    <connections>
+                        <outlet property="bottomView" destination="68u-UO-9Xs" id="c8J-rX-GhM"/>
+                        <outlet property="tableView" destination="uaK-OM-PvV" id="EZR-8U-bhx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLv-yc-EfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492.75362318840581" y="-145.3125"/>
         </scene>
         <!--Create-->
         <scene sceneID="k4q-b3-QlL">
@@ -181,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-jF-I52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482.60869565217394" y="-357.58928571428572"/>
+            <point key="canvasLocation" x="494" y="-898"/>
         </scene>
     </scenes>
 </document>
