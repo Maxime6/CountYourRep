@@ -11,11 +11,13 @@
         <scene sceneID="RcL-l0-0fS">
             <objects>
                 <tabBarController id="Pjc-KJ-bGy" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="khT-fY-mau">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="khT-fY-mau">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.14901960784313725" green="0.16862745098039217" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="kgG-Oa-yxB" kind="relationship" relationship="viewControllers" id="N9f-HG-G7Q"/>
@@ -25,20 +27,18 @@
             </objects>
             <point key="canvasLocation" x="-429" y="-144"/>
         </scene>
-        <!--Item-->
+        <!--Create-->
         <scene sceneID="k4q-b3-QlL">
             <objects>
                 <viewController id="kgG-Oa-yxB" customClass="NewWorkoutViewController" customModule="CountYourRep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAO-yb-yT0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPT-Eb-hF3">
-                                <rect key="frame" x="0.0" y="482" width="414" height="414"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPT-Eb-hF3">
+                                <rect key="frame" x="61" y="655" width="303" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vPT-Eb-hF3" secondAttribute="height" multiplier="1:1" id="Ihj-wj-yZI"/>
-                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="IpI-1g-HgO">
                                 <rect key="frame" x="50" y="153.5" width="314" height="550"/>
@@ -163,17 +163,15 @@
                         <constraints>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="centerY" secondItem="32Q-n1-ByY" secondAttribute="centerY" id="QRR-6g-ZuK"/>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="leading" secondItem="32Q-n1-ByY" secondAttribute="leading" constant="50" id="ZXT-KD-gjm"/>
-                            <constraint firstAttribute="bottom" secondItem="vPT-Eb-hF3" secondAttribute="bottom" id="cSt-4p-Pyu"/>
                             <constraint firstItem="32Q-n1-ByY" firstAttribute="trailing" secondItem="IpI-1g-HgO" secondAttribute="trailing" constant="50" id="iJW-1p-hiD"/>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="centerX" secondItem="32Q-n1-ByY" secondAttribute="centerX" id="jTq-0C-gBg"/>
-                            <constraint firstItem="vPT-Eb-hF3" firstAttribute="leading" secondItem="DAO-yb-yT0" secondAttribute="leading" id="qDd-5Q-kn9"/>
-                            <constraint firstItem="32Q-n1-ByY" firstAttribute="trailing" secondItem="vPT-Eb-hF3" secondAttribute="trailing" id="ygt-XK-r9k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="32Q-n1-ByY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uI5-jm-gWg"/>
+                    <tabBarItem key="tabBarItem" title="Create" id="uI5-jm-gWg"/>
                     <connections>
                         <outlet property="addWorkoutButton" destination="Cn6-Ss-VNQ" id="TdS-Ht-SB1"/>
+                        <outlet property="bottomStackView" destination="Occ-F0-biX" id="vTZ-aa-3ME"/>
                         <outlet property="nameTextField" destination="DFi-pf-AuW" id="3Lt-Kb-Ife"/>
                         <outlet property="repeatTextField" destination="m8M-S3-D3R" id="zmz-cZ-M6n"/>
                         <outlet property="resumeLabel" destination="zFe-eJ-sH2" id="fVg-cW-F1R"/>

@@ -17,11 +17,13 @@ class NewWorkoutViewController: UIViewController {
     @IBOutlet weak var addWorkoutButton: UIButton!
     
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var bottomStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAddButton()
         topView.layer.cornerRadius = 40
+        topView.frame = CGRect(x: 0.0, y: view.frame.height / 2, width: view.frame.width, height: view.frame.height / 2)
     }
     
     private func setUpAddButton() {
