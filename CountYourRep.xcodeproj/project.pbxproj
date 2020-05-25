@@ -17,6 +17,7 @@
 		AF93DA8B2479BB79006EC8F4 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93DA8A2479BB79006EC8F4 /* WorkoutsViewController.swift */; };
 		AF93DA8E2479C097006EC8F4 /* workoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93DA8C2479C097006EC8F4 /* workoutTableViewCell.swift */; };
 		AF93DA8F2479C097006EC8F4 /* workoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF93DA8D2479C097006EC8F4 /* workoutTableViewCell.xib */; };
+		AFEBB6B8247C56F80063A39C /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBB6B7247C56F80063A39C /* Workout.swift */; };
 		AFF528E724795C3A000040D6 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF528E624795C3A000040D6 /* NewWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		AF93DA8A2479BB79006EC8F4 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		AF93DA8C2479C097006EC8F4 /* workoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutTableViewCell.swift; sourceTree = "<group>"; };
 		AF93DA8D2479C097006EC8F4 /* workoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = workoutTableViewCell.xib; sourceTree = "<group>"; };
+		AFEBB6B7247C56F80063A39C /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		AFF528E624795C3A000040D6 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AF63CD6D24771D5900E76A22 /* CountYourRep.xcdatamodeld */,
+				AFEBB6B7247C56F80063A39C /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				AF63CD6F24771D5900E76A22 /* CountYourRep.xcdatamodeld in Sources */,
 				AF93DA8B2479BB79006EC8F4 /* WorkoutsViewController.swift in Sources */,
+				AFEBB6B8247C56F80063A39C /* Workout.swift in Sources */,
 				AFF528E724795C3A000040D6 /* NewWorkoutViewController.swift in Sources */,
 				AF93DA8E2479C097006EC8F4 /* workoutTableViewCell.swift in Sources */,
 				AF63CD6524771D5900E76A22 /* AppDelegate.swift in Sources */,
