@@ -10,6 +10,7 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -18,6 +19,8 @@ class StatsViewController: UIViewController {
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
         segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        
+        bottomView.layer.cornerRadius = 40
     }
 
 

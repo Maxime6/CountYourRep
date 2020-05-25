@@ -107,17 +107,70 @@
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="selectedSegmentTintColor" red="1" green="0.76470588240000004" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5My-hN-bHv">
+                                <rect key="frame" x="0.0" y="743" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.16862745100000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6n-pz-fa7">
+                                <rect key="frame" x="192" y="758" width="30" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="BTi-Qc-xHE"/>
+                                    <constraint firstAttribute="height" constant="35" id="Puo-Br-oy1"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.76470588240000004" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                    <color key="titleColor" red="1" green="0.76470588240000004" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great job today !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpo-qC-XyA">
+                                <rect key="frame" x="126" y="708" width="162" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ytG-vI-OcB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.76470588240000004" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yJp-jn-cgQ">
+                                <rect key="frame" x="20" y="141" width="374" height="552"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date du jour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yC-Oa-cNN">
+                                <rect key="frame" x="158.5" y="106" width="97" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3po-yW-sxl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.76470588240000004" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="d6n-pz-fa7" firstAttribute="top" secondItem="Lpo-qC-XyA" secondAttribute="bottom" constant="25" id="0aJ-61-dN3"/>
+                            <constraint firstItem="fIV-Z9-Trr" firstAttribute="trailing" secondItem="yJp-jn-cgQ" secondAttribute="trailing" constant="20" id="22K-Hn-pKT"/>
+                            <constraint firstItem="fIV-Z9-Trr" firstAttribute="bottom" secondItem="5My-hN-bHv" secondAttribute="bottom" constant="-30" id="4mN-ez-sdr"/>
+                            <constraint firstItem="fIV-Z9-Trr" firstAttribute="bottom" secondItem="d6n-pz-fa7" secondAttribute="bottom" constant="20" id="5DI-Aw-nuI"/>
+                            <constraint firstItem="5My-hN-bHv" firstAttribute="centerX" secondItem="XxL-lp-pCa" secondAttribute="centerX" id="9lt-Rn-2TH"/>
+                            <constraint firstItem="Lpo-qC-XyA" firstAttribute="centerX" secondItem="XxL-lp-pCa" secondAttribute="centerX" id="Cgd-tW-Tgy"/>
+                            <constraint firstItem="5My-hN-bHv" firstAttribute="leading" secondItem="fIV-Z9-Trr" secondAttribute="leading" id="IUT-co-Ahd"/>
                             <constraint firstItem="R8V-Tt-xcb" firstAttribute="leading" secondItem="fIV-Z9-Trr" secondAttribute="leading" constant="15" id="Ojj-Qj-zjP"/>
                             <constraint firstItem="fIV-Z9-Trr" firstAttribute="trailing" secondItem="R8V-Tt-xcb" secondAttribute="trailing" constant="15" id="QdZ-eg-OTO"/>
+                            <constraint firstItem="5My-hN-bHv" firstAttribute="top" secondItem="Lpo-qC-XyA" secondAttribute="bottom" constant="10" id="R8a-zl-dZl"/>
+                            <constraint firstItem="Lpo-qC-XyA" firstAttribute="top" secondItem="yJp-jn-cgQ" secondAttribute="bottom" constant="15" id="SjD-ID-JSE"/>
                             <constraint firstItem="R8V-Tt-xcb" firstAttribute="top" secondItem="fIV-Z9-Trr" secondAttribute="top" constant="20" id="WkJ-co-jFT"/>
+                            <constraint firstItem="yJp-jn-cgQ" firstAttribute="leading" secondItem="fIV-Z9-Trr" secondAttribute="leading" constant="20" id="Zgq-5v-fXx"/>
+                            <constraint firstItem="2yC-Oa-cNN" firstAttribute="top" secondItem="R8V-Tt-xcb" secondAttribute="bottom" constant="7" id="Zql-4o-c3y"/>
+                            <constraint firstItem="5My-hN-bHv" firstAttribute="trailing" secondItem="fIV-Z9-Trr" secondAttribute="trailing" id="enp-oS-65c"/>
+                            <constraint firstItem="2yC-Oa-cNN" firstAttribute="centerX" secondItem="XxL-lp-pCa" secondAttribute="centerX" id="khG-5c-OSD"/>
+                            <constraint firstItem="d6n-pz-fa7" firstAttribute="centerX" secondItem="XxL-lp-pCa" secondAttribute="centerX" id="q5y-Qw-Yok"/>
+                            <constraint firstItem="yJp-jn-cgQ" firstAttribute="top" secondItem="2yC-Oa-cNN" secondAttribute="bottom" constant="15" id="u0a-ax-DbS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fIV-Z9-Trr"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" id="Zur-ei-giw"/>
                     <connections>
+                        <outlet property="bottomView" destination="5My-hN-bHv" id="Yfo-Ho-66u"/>
                         <outlet property="segmentedControl" destination="R8V-Tt-xcb" id="WIX-K2-2dJ"/>
                     </connections>
                 </viewController>
@@ -282,4 +335,7 @@
             <point key="canvasLocation" x="494" y="-898"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
 </document>
