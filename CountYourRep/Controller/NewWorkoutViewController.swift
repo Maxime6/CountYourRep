@@ -33,6 +33,36 @@ class NewWorkoutViewController: UIViewController {
         addWorkoutButton.layer.shadowRadius = 3
         addWorkoutButton.layer.shadowOpacity = 0.3
     }
+    
+    private func createWorkout() {
+        guard let workoutName = nameTextField.text else { return }
+        guard let numberOfRep = repeatTextField.text?.transformToInt else { return }
+        guard let numberOfSeries = seriesTextField.text?.transformToInt else { return }
+        Workout.createWorkout(name: workoutName, numberOfRep: numberOfRep, numberOfSeries: numberOfSeries)
+    }
+    
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        repeatTextField.resignFirstResponder()
+        seriesTextField.resignFirstResponder()
+    }
+    
+    @IBAction func addWorkoutButtonTapped(_ sender: Any) {
+        if nameTextField.text == "" || repeatTextField.text == "" || seriesTextField.text == "" {
+            displayAlert(title: "", message: "Please enter a name, number of rep and series to create your workout", preferredStyle: .alert)
+        } else {
+            createWorkout()
+        }
+    }
+    
+}
 
-
+extension NewWorkoutViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        repeatTextField.resignFirstResponder()
+        seriesTextField.resignFirstResponder()
+        return true
+    }
 }

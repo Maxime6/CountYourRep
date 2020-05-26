@@ -83,6 +83,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="numberOfRepLabel" destination="kTA-Y1-qma" id="7CW-KJ-1xw"/>
+                <outlet property="numberOfSeriesLabel" destination="xFO-lP-2OY" id="2GC-cM-2MB"/>
                 <outlet property="workoutNameLabel" destination="N0c-jR-ypq" id="cdk-hu-WSy"/>
                 <outlet property="workoutView" destination="GcX-8U-Fmo" id="eKG-X3-dYj"/>
             </connections>

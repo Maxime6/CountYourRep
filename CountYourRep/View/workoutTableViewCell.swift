@@ -12,6 +12,8 @@ class workoutTableViewCell: UITableViewCell {
 
     @IBOutlet weak var workoutNameLabel: UILabel!
     @IBOutlet weak var workoutView: UIView!
+    @IBOutlet weak var numberOfRepLabel: UILabel!
+    @IBOutlet weak var numberOfSeriesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,14 @@ class workoutTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    var workout: Workout? {
+        didSet {
+            workoutNameLabel.text = workout?.name
+            numberOfRepLabel.text = workout?.numberOfRep.description
+            numberOfSeriesLabel.text = workout?.numberOfSeries.description
+        }
     }
     
 }
