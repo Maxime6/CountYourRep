@@ -238,7 +238,7 @@
                                                         <rect key="frame" x="0.0" y="30.5" width="314" height="34"/>
                                                         <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="kgG-Oa-yxB" id="MmH-hM-pE9"/>
                                                         </connections>
@@ -264,7 +264,7 @@
                                                         <rect key="frame" x="0.0" y="30.5" width="314" height="34"/>
                                                         <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="kgG-Oa-yxB" id="4nk-sE-uyB"/>
                                                         </connections>
@@ -323,9 +323,38 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUA-pY-T7z">
+                                <rect key="frame" x="82" y="281.5" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yV-Qb-z9A">
+                                        <rect key="frame" x="53" y="196" width="144.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
+                                        <color key="textColor" red="0.33333333329999998" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkSymbol" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-Iv-knu">
+                                        <rect key="frame" x="75" y="55" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Fdu-bX-RFX"/>
+                                            <constraint firstAttribute="width" secondItem="Dh2-Iv-knu" secondAttribute="height" multiplier="1:1" id="kVu-72-gFN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1yV-Qb-z9A" secondAttribute="bottom" constant="30" id="9zD-MT-awM"/>
+                                    <constraint firstItem="1yV-Qb-z9A" firstAttribute="centerX" secondItem="PUA-pY-T7z" secondAttribute="centerX" id="Sb2-0y-VhU"/>
+                                    <constraint firstItem="Dh2-Iv-knu" firstAttribute="top" secondItem="PUA-pY-T7z" secondAttribute="top" constant="55" id="VRb-cv-7U7"/>
+                                    <constraint firstItem="Dh2-Iv-knu" firstAttribute="centerX" secondItem="PUA-pY-T7z" secondAttribute="centerX" id="evw-zi-kqr"/>
+                                    <constraint firstAttribute="width" constant="250" id="nLq-Ja-kIv"/>
+                                    <constraint firstAttribute="height" constant="250" id="qpd-0v-KZX"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.019607843137254902" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.019607843140000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PUA-pY-T7z" firstAttribute="centerX" secondItem="DAO-yb-yT0" secondAttribute="centerX" id="3oO-iK-AQV"/>
+                            <constraint firstItem="PUA-pY-T7z" firstAttribute="centerY" secondItem="DAO-yb-yT0" secondAttribute="centerY" id="C0c-IP-G3T"/>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="centerY" secondItem="32Q-n1-ByY" secondAttribute="centerY" id="QRR-6g-ZuK"/>
                             <constraint firstItem="IpI-1g-HgO" firstAttribute="leading" secondItem="32Q-n1-ByY" secondAttribute="leading" constant="50" id="ZXT-KD-gjm"/>
                             <constraint firstItem="32Q-n1-ByY" firstAttribute="trailing" secondItem="IpI-1g-HgO" secondAttribute="trailing" constant="50" id="iJW-1p-hiD"/>
@@ -345,6 +374,7 @@
                         <outlet property="resumeLabel" destination="zFe-eJ-sH2" id="fVg-cW-F1R"/>
                         <outlet property="seriesTextField" destination="7PD-tI-igx" id="3om-TX-uBI"/>
                         <outlet property="topView" destination="vPT-Eb-hF3" id="r1i-lt-dMF"/>
+                        <outlet property="validationView" destination="PUA-pY-T7z" id="AHe-vX-hX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWA-jF-I52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,6 +388,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkSymbol" width="170.5" height="170.5"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

@@ -15,12 +15,13 @@ class NewWorkoutViewController: UIViewController {
     @IBOutlet weak var seriesTextField: UITextField!
     @IBOutlet weak var resumeLabel: UILabel!
     @IBOutlet weak var addWorkoutButton: UIButton!
-    
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var bottomStackView: UIStackView!
+    @IBOutlet weak var validationView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        validationViewSettings()
         setUpAddButton()
         topView.layer.cornerRadius = 40
         topView.frame = CGRect(x: 0.0, y: view.frame.height / 2, width: view.frame.width, height: view.frame.height / 2)
@@ -53,7 +54,24 @@ class NewWorkoutViewController: UIViewController {
             displayAlert(title: "", message: "Please enter a name, number of rep and series to create your workout", preferredStyle: .alert)
         } else {
             createWorkout()
+            validationView.isHidden = false
+            UIView.animate(withDuration: 3.0, animations: {
+                self.validationView.alpha = 0
+            })
+            clearTextField()
         }
+    }
+    
+    private func clearTextField() {
+        nameTextField.text = ""
+        repeatTextField.text = ""
+        seriesTextField.text = ""
+    }
+    
+    private func validationViewSettings() {
+        validationView.layer.cornerRadius = 5
+        validationView.layer.borderWidth = 0.2
+        validationView.layer.borderColor = UIColor(displayP3Red: 85/255, green: 85/255, blue: 85/255, alpha: 1.0).cgColor
     }
     
 }

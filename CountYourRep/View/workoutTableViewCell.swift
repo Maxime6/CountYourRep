@@ -19,7 +19,7 @@ class workoutTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        workoutView.layer.borderWidth = 0.5
+        workoutView.layer.borderWidth = 0.3
         workoutView.layer.borderColor = UIColor(ciColor: .white).cgColor
         workoutView.layer.cornerRadius = 10
     }

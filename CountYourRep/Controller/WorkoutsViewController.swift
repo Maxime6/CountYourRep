@@ -13,14 +13,18 @@ class WorkoutsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomView: UIView!
     
-    private var workouts = Workout.fetchAll()
+    var workouts = Workout.fetchAll()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UINib(nibName: "workoutTableViewCell", bundle: nil), forCellReuseIdentifier: "workoutCell")
 
         bottomView.layer.cornerRadius = 40
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        tableView.reloadData()
     }
 
 }
